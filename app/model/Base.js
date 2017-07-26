@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.model.Base', {
+Ext.define('SHOGun.client.model.Base', {
     extend: 'Ext.data.Model',
 
     requires: [
@@ -22,7 +22,7 @@ Ext.define('MoMo.client.model.Base', {
     }],
 
     schema: {
-        namespace: 'MoMo.client.model'
+        namespace: 'SHOGun.client.model'
     }
 
 });

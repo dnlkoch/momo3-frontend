@@ -20,7 +20,7 @@
  *
  * @class ShowMeasureToolsPanelModel
  */
-Ext.define('MoMo.client.view.button.ShowMeasureToolsPanelModel', {
+Ext.define('SHOGun.client.view.button.ShowMeasureToolsPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.button.showmeasuretoolspanel',

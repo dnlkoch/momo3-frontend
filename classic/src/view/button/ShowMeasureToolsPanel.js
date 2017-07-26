@@ -21,9 +21,9 @@
  *
  * @class ShowMeasureToolsPanel
  */
-Ext.define("MoMo.client.view.button.ShowMeasureToolsPanel", {
+Ext.define("SHOGun.client.view.button.ShowMeasureToolsPanel", {
     extend: "Ext.button.Button",
-    xtype: 'momo-button-showmeasuretoolspanel',
+    xtype: 'shogun-button-showmeasuretoolspanel',
 
     requires: [
         'Ext.app.ViewModel',
@@ -43,7 +43,7 @@ Ext.define("MoMo.client.view.button.ShowMeasureToolsPanel", {
 
     enableToggle: true,
 
-    toggleGroup: 'momo-common-tools',
+    toggleGroup: 'shogun-common-tools',
 
     listeners: {
         toggle: 'onToggle'

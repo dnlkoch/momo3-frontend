@@ -1,9 +1,9 @@
-Ext.define('MoMo.client.util.ApplicationState', {
+Ext.define('SHOGun.client.util.ApplicationState', {
     requires: [
         'BasiGX.util.Map',
 
-        'MoMo.client.util.ApplicationContext',
-        'MoMo.client.util.OlStyle'
+        'SHOGun.client.util.ApplicationContext',
+        'SHOGun.client.util.OlStyle'
     ],
 
     statics: {
@@ -20,10 +20,10 @@ Ext.define('MoMo.client.util.ApplicationState', {
             }
 
             var redliningPanel = Ext.ComponentQuery.query(
-                    'momo-panel-redlining')[0];
+                    'shogun-panel-redlining')[0];
 
             if (redliningPanel) {
-                var olStyleUtil = MoMo.client.util.OlStyle;
+                var olStyleUtil = SHOGun.client.util.OlStyle;
                 var redlining = redliningPanel.getController().getState();
                 var redliningState = {};
 
@@ -60,7 +60,7 @@ Ext.define('MoMo.client.util.ApplicationState', {
             }
 
             applicationState.redlining = redliningState;
-            applicationState.application = MoMo.client.util
+            applicationState.application = SHOGun.client.util
                     .ApplicationContext.getApplicationContext().id;
 
             Ext.applyIf(applicationState, opts);
@@ -74,10 +74,10 @@ Ext.define('MoMo.client.util.ApplicationState', {
         setState: function(applicationState, cbSuccess, cbFailure, cbScope) {
             var mapComponent = BasiGX.util.Map.getMapComponent();
             var redliningPanel = Ext.ComponentQuery.query(
-                    'momo-panel-redlining')[0];
+                    'shogun-panel-redlining')[0];
 
             if (!(applicationState instanceof
-                    MoMo.client.model.ApplicationState)) {
+                    SHOGun.client.model.ApplicationState)) {
                 return false;
             }
 
@@ -88,7 +88,7 @@ Ext.define('MoMo.client.util.ApplicationState', {
 
             if (applicationStateCopy.get('redlining')) {
                 var redliningObj = applicationState.get('redlining');
-                var olStyleUtil = MoMo.client.util.OlStyle;
+                var olStyleUtil = SHOGun.client.util.OlStyle;
 
                 if (redliningObj.features) {
                     var geoJson = new ol.format.GeoJSON();
@@ -130,13 +130,13 @@ Ext.define('MoMo.client.util.ApplicationState', {
 
             if (!redliningPanel) {
                 var redliningBtn = Ext.ComponentQuery.query(
-                        'momo-button-showredliningtoolspanel')[0];
+                        'shogun-button-showredliningtoolspanel')[0];
 
                 redliningBtn.toggle(true);
                 redliningBtn.toggle(false);
 
                 redliningPanel = Ext.ComponentQuery.query(
-                        'momo-panel-redlining')[0];
+                        'shogun-panel-redlining')[0];
             }
 
             if (applicationStateCopy.get('redlining')) {
@@ -159,7 +159,7 @@ Ext.define('MoMo.client.util.ApplicationState', {
                 return false;
             }
 
-            MoMo.client.model.ApplicationState.load(appStateToken, {
+            SHOGun.client.model.ApplicationState.load(appStateToken, {
                 success: function(record) {
                     if (Ext.isFunction(cbSuccess)) {
                         cbSuccess.call(cbScope, record);
@@ -180,7 +180,7 @@ Ext.define('MoMo.client.util.ApplicationState', {
                 cbScope) {
 
             if (!(applicationState instanceof
-                    MoMo.client.model.ApplicationState)) {
+                    SHOGun.client.model.ApplicationState)) {
                 return false;
             }
 
@@ -205,7 +205,7 @@ Ext.define('MoMo.client.util.ApplicationState', {
                 cbScope) {
 
             if (!(applicationState instanceof
-                    MoMo.client.model.ApplicationState)) {
+                    SHOGun.client.model.ApplicationState)) {
                 return false;
             }
 

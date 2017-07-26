@@ -18,10 +18,10 @@
  *
  * Lets the user control the maps scale with a combobox
  *
- * @class MoMo.client.view.combo.ScaleCombo
+ * @class SHOGun.client.view.combo.ScaleCombo
  */
-Ext.define("MoMo.client.view.combo.ScaleCombo", {
-    xtype: "momo-combo-scale",
+Ext.define("SHOGun.client.view.combo.ScaleCombo", {
+    xtype: "shogun-combo-scale",
     extend: 'BasiGX.view.combo.ScaleCombo',
     requires: [
     ],

@@ -1,15 +1,15 @@
 /**
  *
  */
-Ext.define('MoMo.client.view.panel.LegendTreeController', {
+Ext.define('SHOGun.client.view.panel.LegendTreeController', {
     extend: 'Ext.app.ViewController',
 
     alias: 'controller.panel.legendtree',
 
     requires: [
         'Ext.window.Toast',
-        'MoMo.shared.MetadataUtil',
-        'MoMo.client.view.window.MetadataWindow'
+        'SHOGun.shared.MetadataUtil',
+        'SHOGun.client.view.window.MetadataWindow'
     ],
 
     /**
@@ -20,18 +20,18 @@ Ext.define('MoMo.client.view.panel.LegendTreeController', {
         var view = me.getView();
         var map;
 
-        if (!MoMo.client.view.component.Map ||
-                !MoMo.client.view.component.Map.guess() ||
-                !MoMo.client.view.component.Map.guess().getMap()) {
+        if (!SHOGun.client.view.component.Map ||
+                !SHOGun.client.view.component.Map.guess() ||
+                !SHOGun.client.view.component.Map.guess().getMap()) {
             Ext.Logger.warn('Couldn\'t find the map object. It\'s very ' +
                     'unlikely the LegendTree will work properly.');
             return false;
         }
 
-        map = MoMo.client.view.component.Map.guess().getMap();
+        map = SHOGun.client.view.component.Map.guess().getMap();
 
         var legendStore = Ext.create('GeoExt.data.store.LayersTree', {
-            model: 'MoMo.client.model.LayerTreeNode',
+            model: 'SHOGun.client.model.LayerTreeNode',
             layerGroup: map.getLayerGroup()
         });
 
@@ -102,16 +102,16 @@ Ext.define('MoMo.client.view.panel.LegendTreeController', {
             url: BasiGX.util.Url.getWebProjectBaseUrl() + 'metadata/csw.action',
             method: "POST",
             params: {
-                xml: MoMo.shared.MetadataUtil.getLoadXml(uuid)
+                xml: SHOGun.shared.MetadataUtil.getLoadXml(uuid)
             },
             defaultHeaders: BasiGX.util.CSRF.getHeader(),
             success: function(response){
                 var responseObj = Ext.decode(response.responseText);
-                var metadataObj = MoMo.shared.MetadataUtil.parseMetadataXml(
+                var metadataObj = SHOGun.shared.MetadataUtil.parseMetadataXml(
                         responseObj.data);
 
                 if(metadataObj){
-                    Ext.create('MoMo.client.view.window.MetadataWindow', {
+                    Ext.create('SHOGun.client.view.window.MetadataWindow', {
                         autoShow: true,
                         metadata: metadataObj
                     });

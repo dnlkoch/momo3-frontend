@@ -17,11 +17,11 @@
  * ShowToolsPanelCommonController
  *
  * Common controller class that combines all properties and methods that
- * will be used by almost all main momo client tools controllers.
+ * will be used by almost all main SHOGun client tools controllers.
  *
  * @class ShowToolsPanelCommonController
  */
-Ext.define('MoMo.client.view.button.ShowToolsPanelCommonController', {
+Ext.define('SHOGun.client.view.button.ShowToolsPanelCommonController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
@@ -45,13 +45,9 @@ Ext.define('MoMo.client.view.button.ShowToolsPanelCommonController', {
      *      for different classes
      */
     createToolsPanel: function(xtype, config) {
-
         var me = this;
-
         var parentBtn = me.getView().getEl();
-
         var position = me.computePosition(parentBtn);
-
         var btnPanel = Ext.create(xtype, {
             style: {
                 'top': position.top,
@@ -92,17 +88,9 @@ Ext.define('MoMo.client.view.button.ShowToolsPanelCommonController', {
      * application header if given.
      */
     computePosition: function(btn){
-        var header = Ext.ComponentQuery.query('panel[region=north]')[0],
-            hHeight = 0;
-
-        if (header) {
-            var hSplitter = header.splitter;
-            hHeight = header.getHeight();
-        }
-
-        var top =
-            btn.getClientRegion().top - hHeight - hSplitter.getHeight() + "px";
-        var right = btn.getWidth()*2 + "px";
+        var top = ((parseInt(btn.getPositioning().top)) +
+                btn.getBorderPadding().beforeY) + "px";
+        var right = btn.getWidth() * 2 + "px";
 
         return {
             top: top,

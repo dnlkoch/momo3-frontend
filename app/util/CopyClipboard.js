@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.CopyClipboard', {
+Ext.define('SHOGun.client.util.CopyClipboard', {
 
     statics: {
 
@@ -11,7 +11,7 @@ Ext.define('MoMo.client.util.CopyClipboard', {
          *
          */
         copyTextToClipboard: function(copyText, cbSuccess, cbFailure, cbScope) {
-            var staticMe = MoMo.client.util.CopyClipboard;
+            var staticMe = SHOGun.client.util.CopyClipboard;
 
             if (!staticMe.copyToClipboardSupported) {
                 Ext.Logger.warn('Copy to clipboard is not supported ' +

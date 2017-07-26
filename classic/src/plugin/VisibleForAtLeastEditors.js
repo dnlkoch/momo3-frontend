@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.plugin.VisibleForAtLeastEditors', {
+Ext.define('SHOGun.client.plugin.VisibleForAtLeastEditors', {
     extend : 'Ext.plugin.Abstract',
     alias : 'plugin.visibleforatleasteditors',
 
@@ -7,7 +7,7 @@ Ext.define('MoMo.client.plugin.VisibleForAtLeastEditors', {
     init : function(cmp) {
         this.setCmp(cmp);
 
-        var currentUserHasAtLeastEditorRole = MoMo.client.util.User
+        var currentUserHasAtLeastEditorRole = SHOGun.client.util.User
             .currentUserHasAtLeastEditorRole();
 
         if(!currentUserHasAtLeastEditorRole) {

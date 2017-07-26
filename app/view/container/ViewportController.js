@@ -2,10 +2,10 @@
  * This class is the controller for the main viewport for the application.
  *
  */
-Ext.define('MoMo.client.container.ViewportController', {
+Ext.define('SHOGun.client.container.ViewportController', {
     extend: 'Ext.app.ViewController',
 
-    alias: 'controller.momo-mainviewport',
+    alias: 'controller.shogun-mainviewport',
 
     requires: [
         'BasiGX.util.CSRF',
@@ -40,13 +40,13 @@ Ext.define('MoMo.client.container.ViewportController', {
             success: function(response) {
                 if (response && response.responseText) {
                     var responseObj = Ext.decode(response.responseText);
-                    var momoUser = Ext.create(
-                        MoMo.client.model.MomoUser,
+                    var user = Ext.create(
+                        SHOGun.client.model.User,
                         responseObj.data
                     );
 
-                    viewModel.set('user', momoUser);
-                    MoMo.client.app.setUser(momoUser);
+                    viewModel.set('user', user);
+                    SHOGun.client.app.setUser(user);
 
                 } else {
                     Ext.Error.raise('Could not get user by session.');

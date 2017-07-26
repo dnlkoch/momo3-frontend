@@ -1,9 +1,9 @@
-Ext.define("MoMo.client.view.panel.LegendTree",{
+Ext.define("SHOGun.client.view.panel.LegendTree",{
     extend: "BasiGX.view.panel.LegendTree",
-    xtype: "momo-panel-legendtree",
+    xtype: "shogun-panel-legendtree",
 
     requires: [
-        'MoMo.client.plugin.BasicTreeColumnLegends'
+        'SHOGun.client.plugin.BasicTreeColumnLegends'
     ],
 
     controller: 'panel.legendtree',

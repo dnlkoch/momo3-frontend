@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.User', {
+Ext.define('SHOGun.client.util.User', {
 
     statics: {
 
@@ -10,7 +10,7 @@ Ext.define('MoMo.client.util.User', {
          */
         getUserInfo: function() {
             var userInfo = null;
-            var appInfo = MoMo.client.getApplication();
+            var appInfo = SHOGun.client.getApplication();
 
             if(appInfo) {
                 userInfo = appInfo.getUser();

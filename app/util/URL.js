@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.URL', {
+Ext.define('SHOGun.client.util.URL', {
 
     statics: {
 

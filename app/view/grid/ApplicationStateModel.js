@@ -1,7 +1,7 @@
 /**
  *
  */
-Ext.define('MoMo.client.view.grid.ApplicationStateModel', {
+Ext.define('SHOGun.client.view.grid.ApplicationStateModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.grid.applicationstate',

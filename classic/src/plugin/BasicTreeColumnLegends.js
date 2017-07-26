@@ -2,7 +2,7 @@
  * A plugin for Ext.grid.column.Column s that overwrites the internal cellTpl to
  * support legends.
  */
-Ext.define('MoMo.client.plugin.BasicTreeColumnLegends', {
+Ext.define('SHOGun.client.plugin.BasicTreeColumnLegends', {
     extend: 'Ext.plugin.Abstract',
     alias: 'plugin.basic_tree_column_legend',
     pluginId: 'basic_tree_column_legend',

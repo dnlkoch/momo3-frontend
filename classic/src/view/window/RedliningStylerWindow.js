@@ -21,11 +21,11 @@
  * You need to require the 'ux' package in your app.json to make use of this
  * component.
  *
- * @class MoMo.client.view.window.RedliningStylerWindow
+ * @class SHOGun.client.view.window.RedliningStylerWindow
  */
-Ext.define("MoMo.client.view.window.RedliningStylerWindow", {
+Ext.define("SHOGun.client.view.window.RedliningStylerWindow", {
     extend: "Ext.window.Window",
-    xtype: 'momo-window-redlining',
+    xtype: 'shogun-window-redlining',
 
     requires: [
         'Ext.ux.colorpick.Button',
@@ -89,7 +89,7 @@ Ext.define("MoMo.client.view.window.RedliningStylerWindow", {
             name: 'pointstyle',
             layout: 'hbox',
             items: [{
-                xtype: 'momo-panel-redliningstyler-point',
+                xtype: 'shogun-panel-redliningstyler-point',
                 style: me.redlinePointStyle
             }]
         }, {
@@ -100,7 +100,7 @@ Ext.define("MoMo.client.view.window.RedliningStylerWindow", {
             name: 'linestringstyle',
             layout: 'hbox',
             items: [{
-                xtype: 'momo-panel-redliningstyler-linestring',
+                xtype: 'shogun-panel-redliningstyler-linestring',
                 style: me.redlineLineStringStyle
             }]
         }, {
@@ -114,7 +114,7 @@ Ext.define("MoMo.client.view.window.RedliningStylerWindow", {
                 margin: '5px'
             },
             items: [{
-                xtype: 'momo-panel-redliningstyler-polygon',
+                xtype: 'shogun-panel-redliningstyler-polygon',
                 style: me.redlinePolygonStyle
             }]
         }];

@@ -18,11 +18,11 @@
  * A grid showing results of the multisearch gazetteer response values.
  * Extends the `BasiGX.view.grid.MultiSearchGazetteerGrid` class.
  *
- * @class MoMo.client.view.grid.MultiSearchGazetteerGrid
+ * @class SHOGun.client.view.grid.MultiSearchGazetteerGrid
  */
-Ext.define("MoMo.client.view.grid.MultiSearchGazetteerGrid",{
+Ext.define("SHOGun.client.view.grid.MultiSearchGazetteerGrid",{
     extend: "BasiGX.view.grid.MultiSearchGazetteerGrid",
-    xtype: "momo-grid-multisearchgazetteergrid",
+    xtype: "shogun-grid-multisearchgazetteergrid",
 
     viewModel: {
         data: {

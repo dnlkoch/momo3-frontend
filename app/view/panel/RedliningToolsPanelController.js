@@ -20,9 +20,9 @@
  * each redlining action on the map (e.g. draw/modify/move/delete point,
  * linestring, polygon). Additionally the simple styler is included.
  *
- * @class MoMo.client.view.panel.RedliningToolsPanelController
+ * @class SHOGun.client.view.panel.RedliningToolsPanelController
  */
-Ext.define('MoMo.client.view.panel.RedliningToolsPanelController', {
+Ext.define('SHOGun.client.view.panel.RedliningToolsPanelController', {
 
     extend: 'Ext.app.ViewController',
 
@@ -115,7 +115,7 @@ Ext.define('MoMo.client.view.panel.RedliningToolsPanelController', {
 
     /**
      * Placeholder for the styler window as instance of
-     * {@link MoMo.client.window.RedliningStylerWindow'} class.
+     * {@link SHOGun.client.window.RedliningStylerWindow'} class.
      */
     stylerWindow: null,
 
@@ -525,7 +525,7 @@ Ext.define('MoMo.client.view.panel.RedliningToolsPanelController', {
     },
 
     /**
-     * Creates an instance of {@link MoMo.client.window.RedliningStylerWindow}
+     * Creates an instance of {@link SHOGun.client.window.RedliningStylerWindow}
      * class with predefined styles for point, linestring and polygon.
      * @param {Ext.button.Button} btn
      * @param {Boolean} pressed toggle state
@@ -535,7 +535,7 @@ Ext.define('MoMo.client.view.panel.RedliningToolsPanelController', {
             view = me.getView();
         if (!me.stylerWindow) {
             me.stylerWindow =
-                Ext.create('MoMo.client.view.window.RedliningStylerWindow', {
+                Ext.create('SHOGun.client.view.window.RedliningStylerWindow', {
                     redliningVectorLayer: view.redliningVectorLayer,
                     redlinePointStyle: view.getRedlinePointStyle(),
                     redlineLineStringStyle: view.getRedlineLineStringStyle(),
@@ -798,7 +798,7 @@ Ext.define('MoMo.client.view.panel.RedliningToolsPanelController', {
 
         me.stateChangeActive = true;
 
-        var styler = Ext.ComponentQuery.query('momo-window-redlining')[0];
+        var styler = Ext.ComponentQuery.query('shogun-window-redlining')[0];
 
         if (state.features) {
             view.redliningVectorLayer.getSource().clear();

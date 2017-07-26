@@ -19,11 +19,11 @@
  * Button used to show and hide a panel with meta informations for the map
  * (i.e. current map scale, used EPSG or mouse position)
  *
- * @class MoMo.client.view.button.ShowMetaPanel
+ * @class SHOGun.client.view.button.ShowMetaPanel
  */
-Ext.define("MoMo.client.view.button.ShowMetaPanel", {
+Ext.define("SHOGun.client.view.button.ShowMetaPanel", {
     extend: "Ext.Button",
-    xtype: 'momo-button-showmetapanel',
+    xtype: 'shogun-button-showmetapanel',
 
     requires: [
         'Ext.app.ViewModel',
@@ -44,9 +44,9 @@ Ext.define("MoMo.client.view.button.ShowMetaPanel", {
 
     glyph: 'xf278@FontAwesome',
 
-    cls: 'momo-showmetapanel-button',
+    cls: 'shogun-showmetapanel-button',
 
-    iconCls: 'momo-showmetapanel-button-icon',
+    iconCls: 'shogun-showmetapanel-button-icon',
 
     listeners: {
         click: 'onClick'

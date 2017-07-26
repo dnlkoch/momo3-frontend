@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.Module', {
+Ext.define('SHOGun.client.util.Module', {
 
     statics: {
 
@@ -23,7 +23,7 @@ Ext.define('MoMo.client.util.Module', {
          */
         createViewport: function(viewportName) {
             var me = this;
-            var appCtxUtil = MoMo.client.util.ApplicationContext;
+            var appCtxUtil = SHOGun.client.util.ApplicationContext;
             var appViewport = appCtxUtil.getValue('viewport');
             var appViewportType = appCtxUtil.getValue('type', appViewport);
             var appViewportPlacements = appCtxUtil.getValue('regions',
@@ -86,8 +86,8 @@ Ext.define('MoMo.client.util.Module', {
 
             // Hide tools that are not contained in activeTools
             // "id" would be a better comparator but it is blacklisted
-            if(module.ui === "momo-tools"){
-                var activeTools = MoMo.client.util
+            if(module.ui === "shogun-tools"){
+                var activeTools = SHOGun.client.util
                         .ApplicationContext.getValue('activeTools');
                 var hidden = true;
                 Ext.each(activeTools, function(activeTool){
@@ -168,7 +168,7 @@ Ext.define('MoMo.client.util.Module', {
          *                              from.
          */
         checkModuleProperties: function(subModule, parentModule) {
-            var appCtxUtil = MoMo.client.util.ApplicationContext;
+            var appCtxUtil = SHOGun.client.util.ApplicationContext;
             var appViewportPropHints = appCtxUtil.getValue('propertyHints',
                     parentModule);
             var appViewportPropMusts = appCtxUtil.getValue('propertyMusts',

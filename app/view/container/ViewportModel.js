@@ -1,6 +1,6 @@
-Ext.define('MoMo.client.view.viewport.ViewportModel', {
+Ext.define('SHOGun.client.view.viewport.ViewportModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.momo-mainviewport',
+    alias: 'viewmodel.shogun-mainviewport',
 
     data: {
         currentView: null,

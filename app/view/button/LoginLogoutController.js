@@ -20,9 +20,9 @@
  * corresponding buttons click as well as displaying account name of the logged
  * in user
  *
- * @class MoMo.client.view.button.LoginLogoutController
+ * @class SHOGun.client.view.button.LoginLogoutController
  */
-Ext.define('MoMo.client.view.button.LoginLogoutController', {
+Ext.define('SHOGun.client.view.button.LoginLogoutController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
@@ -39,7 +39,7 @@ Ext.define('MoMo.client.view.button.LoginLogoutController', {
 
         var isLogin = viewModel.get('isLoginButton');
 
-        if(isLogin) {
+        if (isLogin) {
             me.doLogin();
         } else {
             BasiGX.confirm(viewModel.get('logoutConfirmMsgText'), {
@@ -60,7 +60,7 @@ Ext.define('MoMo.client.view.button.LoginLogoutController', {
      */
     doLogin: function() {
         var baseUrl = BasiGX.util.Url.getWebProjectBaseUrl();
-        var clientId = MoMo.client.util.ApplicationContext
+        var clientId = SHOGun.client.util.ApplicationContext
                 .getApplicationContext().id;
 
         location.href = baseUrl + 'login/?clientId=' + clientId;
@@ -91,23 +91,22 @@ Ext.define('MoMo.client.view.button.LoginLogoutController', {
 
         // TODO get rid of delayed tasks
         var task = new Ext.util.DelayedTask(function(){
-            var loggedInUser = MoMo.client.app.getUser();
+            var loggedInUser = SHOGun.client.app.getUser();
             var buttonText;
+            var buttonTooltip;
             var isLoginButton;
 
-            if(loggedInUser) {
-                var accountName = loggedInUser.get('accountName');
-
-                buttonText = viewModel.get('logoutBtnText') +
-                    ' (' + accountName + ')';
+            if (loggedInUser) {
+                buttonTooltip = viewModel.get('logoutBtnText');
                 isLoginButton = false;
             } else {
                 buttonText = viewModel.get('loginBtnText');
+                buttonTooltip = viewModel.get('loginBtnText');
                 isLoginButton = true;
             }
 
             viewModel.set('text', buttonText);
-            viewModel.set('tooltip', buttonText);
+            viewModel.set('tooltip', buttonTooltip);
             viewModel.set('isLoginButton', isLoginButton);
         });
         task.delay(500);

@@ -18,9 +18,9 @@
  *
  * The view model for the login/logout button
  *
- * @class MoMo.client.view.button.LoginLogoutModel
+ * @class SHOGun.client.view.button.LoginLogoutModel
  */
-Ext.define('MoMo.client.view.button.LoginLogoutModel', {
+Ext.define('SHOGun.client.view.button.LoginLogoutModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.button.loginlogout',

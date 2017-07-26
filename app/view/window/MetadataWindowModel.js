@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.view.window.MetadataWindowModel', {
+Ext.define('SHOGun.client.view.window.MetadataWindowModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.window.metadata',
     data: {

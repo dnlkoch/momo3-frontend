@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.view.component.MapController', {
+Ext.define('SHOGun.client.view.component.MapController', {
     extend: 'Ext.app.ViewController',
 
     alias: 'controller.component.map',
@@ -7,8 +7,8 @@ Ext.define('MoMo.client.view.component.MapController', {
      *
      */
     statics: {
-        FOLDER_CLASS_NAME: 'de.terrestris.momo.model.tree.LayerTreeFolder',
-        LEAF_CLASS_NAME: 'de.terrestris.momo.model.tree.LayerTreeLeaf'
+        FOLDER_CLASS_NAME: 'de.terrestris.appshogun.model.tree.LayerTreeFolder',
+        LEAF_CLASS_NAME: 'de.terrestris.appshogun.model.tree.LayerTreeLeaf'
     },
 
     /**
@@ -48,7 +48,7 @@ Ext.define('MoMo.client.view.component.MapController', {
      */
     createOlMap: function() {
         var me = this;
-        var appCtxUtil = MoMo.client.util.ApplicationContext;
+        var appCtxUtil = SHOGun.client.util.ApplicationContext;
         var mapConfig = appCtxUtil.getMapConfig();
         var mapControls = appCtxUtil.getMapControls();
         var map;
@@ -112,7 +112,7 @@ Ext.define('MoMo.client.view.component.MapController', {
      */
     createOlLayers: function() {
         var me = this;
-        var appCtxUtil = MoMo.client.util.ApplicationContext;
+        var appCtxUtil = SHOGun.client.util.ApplicationContext;
         var appCtx = appCtxUtil.getApplicationContext();
         var mapLayers = appCtxUtil.getValue('mapLayers');
         var layerTreeRootNode = appCtx.layerTree;
@@ -128,7 +128,7 @@ Ext.define('MoMo.client.view.component.MapController', {
     /**
      *
      * Creates an OL layer "tree" hierarchy (with ol.layer.Group as folders)
-     * based on the given tree structure coming from the SHOGun2/MoMo
+     * based on the given tree structure coming from the SHOGun2
      * backend. In case of folders, this function will be called recursively
      * with the children of a folder.
      *
@@ -177,7 +177,7 @@ Ext.define('MoMo.client.view.component.MapController', {
                 name: layerTreeNode.text,
                 visible: layerTreeNode.checked,
                 // set expanded here even though GeoExt does not handle it.
-                // 'MoMo.client.model.NetviewLayerTreeNode' as an extension
+                // 'SHOGun.client.model.NetviewLayerTreeNode' as an extension
                 // of 'GeoExt.data.model.LayerTreeNode' will care about this!
                 expanded: layerTreeNode.expanded
             });
@@ -344,7 +344,7 @@ Ext.define('MoMo.client.view.component.MapController', {
      *
      */
     getProjectionString: function() {
-        var appCtxUtil = MoMo.client.util.ApplicationContext;
+        var appCtxUtil = SHOGun.client.util.ApplicationContext;
         var mapConfig = appCtxUtil.getMapConfig();
         var mapConfigProjection = mapConfig.projection;
 
@@ -360,7 +360,7 @@ Ext.define('MoMo.client.view.component.MapController', {
     },
 
     setRouting: function(){
-        var mapComponentXType = 'momo-component-map';
+        var mapComponentXType = 'shogun-component-map';
         var viewModel = this.getView().getViewModel();
         var hash = BasiGX.util.Application.getRoute(mapComponentXType);
 
@@ -455,7 +455,7 @@ Ext.define('MoMo.client.view.component.MapController', {
     /**
     * Shows feature info window on hover feature clicked. If at least one
     * feature with property `chartable` was retrieved a chart window
-    * as instance of `MoMo.view.window.WaterDataChartWindow` will be shown
+    * as instance of `SHOGun.view.window.WaterDataChartWindow` will be shown
     * instead
     * @param {Array} olFeats Array of retrieved features
     */
@@ -489,12 +489,12 @@ Ext.define('MoMo.client.view.component.MapController', {
     requestChartingData: function(feat) {
         var me = this;
 
-        var win = Ext.ComponentQuery.query('momo-waterdatachart')[0];
+        var win = Ext.ComponentQuery.query('shogun-waterdatachart')[0];
         if (win) {
             win.destroy();
         }
 
-        win = Ext.create('MoMo.view.window.WaterDataChartWindow', {
+        win = Ext.create('SHOGun.view.window.WaterDataChartWindow', {
             chartFeature: feat
         });
         win.show();
@@ -531,7 +531,7 @@ Ext.define('MoMo.client.view.component.MapController', {
                 listeners: {
                     close: function(card){
                         var selectInteraction = me.getView()
-                                .getPlugin('momo-client-hover')
+                                .getPlugin('shogun-client-hover')
                                 .getHoverVectorLayerInteraction();
                         selectInteraction.getFeatures()
                                 .remove(card.olFeature);
@@ -551,7 +551,7 @@ Ext.define('MoMo.client.view.component.MapController', {
             listeners: {
                 close: function(){
                     var selectInteraction = me.getView()
-                    .getPlugin('momo-client-hover')
+                    .getPlugin('shogun-client-hover')
                     .getHoverVectorLayerInteraction();
                     selectInteraction.getFeatures().clear();
                 },

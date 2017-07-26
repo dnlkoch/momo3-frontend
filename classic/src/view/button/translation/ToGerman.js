@@ -1,30 +1,30 @@
 /**
  * ToGerman Button
  *
- * @class MoMo.client.view.button.translation.ToGerman
+ * @class SHOGun.client.view.button.translation.ToGerman
  */
-Ext.define('MoMo.client.view.button.translation.ToGerman', {
+Ext.define('SHOGun.client.view.button.translation.ToGerman', {
     extend: 'Ext.Button',
-    xtype: 'momo-translation-de-button',
+    xtype: 'shogun-translation-de-button',
     requires: [
         'Ext.app.ViewModel',
 
-        'MoMo.client.view.button.TranslationController',
-        'MoMo.client.view.button.TranslationModel'
+        'SHOGun.client.view.button.TranslationController',
+        'SHOGun.client.view.button.TranslationModel'
     ],
 
     controller: 'button.translation',
 
     viewModel: 'button.translation',
 
-    ui: 'momo-header-tools',
+    iconCls: 'trans-de',
 
     scale: 'small',
 
     /**
      * Check if application default language set to german
      */
-    isDefaultLanguage: null,
+    isDefaultLanguage: true,
 
     /**
      *

@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.view.grid.ApplicationStateController', {
+Ext.define('SHOGun.client.view.grid.ApplicationStateController', {
     extend: 'Ext.app.ViewController',
 
     alias: 'controller.grid.applicationstate',
@@ -6,11 +6,11 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
     requires: [
         'BasiGX.util.Url',
 
-        'MoMo.client.model.ApplicationState',
-        'MoMo.client.util.ApplicationContext',
-        'MoMo.client.util.ApplicationState',
-        'MoMo.client.util.CopyClipboard',
-        'MoMo.client.util.OlStyle'
+        'SHOGun.client.model.ApplicationState',
+        'SHOGun.client.util.ApplicationContext',
+        'SHOGun.client.util.ApplicationState',
+        'SHOGun.client.util.CopyClipboard',
+        'SHOGun.client.util.OlStyle'
     ],
 
     /**
@@ -20,7 +20,7 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
         var me = this;
         var view = me.getView();
         var store = view.getStore();
-        var webMapId = MoMo.client.util.ApplicationContext
+        var webMapId = SHOGun.client.util.ApplicationContext
                 .getApplicationContext().id;
 
         store.load({
@@ -151,7 +151,7 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
                 columnId + '] a');
 
         if (gridNodeColumnEl) {
-            MoMo.client.util.CopyClipboard.copyTextToClipboard(
+            SHOGun.client.util.CopyClipboard.copyTextToClipboard(
                     gridNodeColumnEl.href,
                     me.onCopyToClipboardSuccess,
                     me.onCopyToClipboardFailure,
@@ -182,7 +182,7 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
     loadApplicationState: function(applicationState) {
         var me = this;
 
-        MoMo.client.util.ApplicationState.setState(
+        SHOGun.client.util.ApplicationState.setState(
                 applicationState, me.onLoadSuccess, me.onLoadFailure, me);
     },
 
@@ -191,10 +191,10 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
      */
     createApplicationState: function(opts) {
         var me = this;
-        var applicationState = Ext.create('MoMo.client.model.ApplicationState',
-                    MoMo.client.util.ApplicationState.getState(opts));
+        var applicationState = Ext.create('SHOGun.client.model.ApplicationState',
+                    SHOGun.client.util.ApplicationState.getState(opts));
 
-        MoMo.client.util.ApplicationState.saveApplicationState(
+        SHOGun.client.util.ApplicationState.saveApplicationState(
                 applicationState, me.onCreateSuccess, me.onCreateFailure, me);
     },
 
@@ -204,7 +204,7 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
     deleteApplicationState: function(applicationState) {
         var me = this;
 
-        MoMo.client.util.ApplicationState.deleteApplicationState(
+        SHOGun.client.util.ApplicationState.deleteApplicationState(
                 applicationState, me.onDeleteSuccess, me.onDeleteFailure, me);
     },
 
@@ -214,13 +214,13 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
     updateApplicationState: function(applicationState) {
         var me = this;
 
-        var state = MoMo.client.util.ApplicationState.getState();
+        var state = SHOGun.client.util.ApplicationState.getState();
 
         applicationState.set('layers', state.layers);
         applicationState.set('mapView', state.mapView);
         applicationState.set('redlining', state.redlining);
 
-        MoMo.client.util.ApplicationState.saveApplicationState(
+        SHOGun.client.util.ApplicationState.saveApplicationState(
                 applicationState, me.onUpdateSuccess, me.onUpdateFailure, me);
     },
 
@@ -319,7 +319,7 @@ Ext.define('MoMo.client.view.grid.ApplicationStateController', {
     urlColumnRenderer: function(token) {
         var me = this;
         var viewModel = me.getViewModel();
-        var appId = MoMo.client.util.ApplicationContext
+        var appId = SHOGun.client.util.ApplicationContext
                 .getApplicationContext().id;
         var url = Ext.String.format('{0}client?id={1}&state={2}',
                 BasiGX.util.Url.getWebProjectBaseUrl(), appId, token);

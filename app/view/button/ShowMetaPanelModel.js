@@ -20,7 +20,7 @@
  *
  * @class ShowMetaPanelModel
  */
-Ext.define('MoMo.client.view.button.ShowMetaPanelModel', {
+Ext.define('SHOGun.client.view.button.ShowMetaPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.button.showmetapanel',

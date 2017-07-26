@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.view.component.MapModel', {
+Ext.define('SHOGun.client.view.component.MapModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.component.map',

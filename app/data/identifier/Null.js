@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.data.identifier.Null', {
+Ext.define('SHOGun.client.data.identifier.Null', {
     extend: 'Ext.data.identifier.Generator',
 
     alias: 'data.identifier.null',

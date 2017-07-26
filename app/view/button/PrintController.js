@@ -19,13 +19,13 @@
  * This controller will be used to show a print dialog on the click
  * on the corresponding print button
  *
- * @class MoMo.client.view.button.PrintController
+ * @class SHOGun.client.view.button.PrintController
  */
-Ext.define('MoMo.client.view.button.PrintController', {
+Ext.define('SHOGun.client.view.button.PrintController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
-        'MoMo.view.window.PrintWindow',
+        'SHOGun.view.window.PrintWindow',
         'BasiGX.view.form.Print'
     ],
 
@@ -42,7 +42,7 @@ Ext.define('MoMo.client.view.button.PrintController', {
             var winX = BasiGX.util.Map.getMapComponent().getX() + 40;
             var winY = BasiGX.util.Map.getMapComponent().getY();
             if (!printWin) {
-                printWin = Ext.create('MoMo.view.window.PrintWindow', {
+                printWin = Ext.create('SHOGun.view.window.PrintWindow', {
                     listeners: {
                         'close': function() {
                             btn.suspendEvents(false);
@@ -51,7 +51,7 @@ Ext.define('MoMo.client.view.button.PrintController', {
                         }
                     },
                     items: [{
-                        xtype: 'momo-form-print',
+                        xtype: 'shogun-form-print',
                         url: view.getPrintUrl() + '/print/',
                         printExtentAlwaysCentered: false,
                         printExtentMovable: true,

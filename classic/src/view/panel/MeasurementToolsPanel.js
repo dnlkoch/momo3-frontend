@@ -17,11 +17,11 @@
  * Panel containing the measure tools for the temporary drawing in the
  * client.
  *
- * @class MoMo.client.view.panel.MeasurementToolsPanel
+ * @class SHOGun.client.view.panel.MeasurementToolsPanel
  */
-Ext.define("MoMo.client.view.panel.MeasurementToolsPanel", {
+Ext.define("SHOGun.client.view.panel.MeasurementToolsPanel", {
     extend: "Ext.panel.Panel",
-    xtype: 'momo-panel-measurement',
+    xtype: 'shogun-panel-measurement',
 
     requires: [
         'Ext.button.Button'
@@ -57,7 +57,7 @@ Ext.define("MoMo.client.view.panel.MeasurementToolsPanel", {
             }
         },
         toggleGroup: 'measure',
-        ui: 'momo-tools',
+        ui: 'shogun-tools',
         scale: 'small',
         showMeasureInfoOnClickedPoints: true
     },

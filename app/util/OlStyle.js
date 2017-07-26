@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.OlStyle', {
+Ext.define('SHOGun.client.util.OlStyle', {
 
     statics: {
 

@@ -18,14 +18,14 @@
  *
  * Button used to zoom to Extent
  *
- * @class MoMo.client.view.button.ZoomToExtent
+ * @class SHOGun.client.view.button.ZoomToExtent
  */
-Ext.define("MoMo.client.view.button.ZoomToExtent", {
+Ext.define("SHOGun.client.view.button.ZoomToExtent", {
     extend: "Ext.Button",
-    xtype: 'momo-button-zoomtoextent',
+    xtype: 'shogun-button-zoomtoextent',
 
     requires: [
-        'MoMo.client.util.ApplicationContext',
+        'SHOGun.client.util.ApplicationContext',
         'BasiGX.util.Map',
         'Ext.app.ViewModel'
     ],
@@ -111,7 +111,7 @@ Ext.define("MoMo.client.view.button.ZoomToExtent", {
      */
     setConfigValues: function(){
 
-        var appCtxUtil = MoMo.client.util.ApplicationContext;
+        var appCtxUtil = SHOGun.client.util.ApplicationContext;
         var mapConfig = appCtxUtil.getMapConfig();
 
         if(mapConfig){

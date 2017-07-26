@@ -20,11 +20,11 @@
  *
  * @class ShowWorkstateToolsPanelController
  */
-Ext.define('MoMo.client.view.button.ShowWorkstateToolsPanelController', {
-    extend: 'MoMo.client.view.button.ShowToolsPanelCommonController',
+Ext.define('SHOGun.client.view.button.ShowWorkstateToolsPanelController', {
+    extend: 'SHOGun.client.view.button.ShowToolsPanelCommonController',
 
     requires: [
-        'MoMo.client.view.panel.WorkstateToolsPanel'
+        'SHOGun.client.view.panel.WorkstateToolsPanel'
     ],
 
     alias: 'controller.button.showworkstatetoolspanel',
@@ -40,7 +40,7 @@ Ext.define('MoMo.client.view.button.ShowWorkstateToolsPanelController', {
     onToggle: function(btn, pressed){
         var me = this;
         if (pressed) {
-            me.showToolsPanel('MoMo.client.view.panel.WorkstateToolsPanel');
+            me.showToolsPanel('SHOGun.client.view.panel.WorkstateToolsPanel');
         } else {
             me.hideToolsPanel();
             me.deactivateTools();

@@ -1,9 +1,9 @@
-Ext.Loader.syncRequire(['MoMo.client.Application']);
+Ext.Loader.syncRequire(['SHOGun.client.Application']);
 
-describe('MoMo.client.Application', function() {
+describe('SHOGun.client.Application', function() {
     describe('Basics', function() {
         it('is defined', function() {
-            expect(MoMo.client.Application).to.not.be(undefined);
+            expect(SHOGun.client.Application).to.not.be(undefined);
         });
     });
 });

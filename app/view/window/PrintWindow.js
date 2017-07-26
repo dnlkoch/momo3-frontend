@@ -1,4 +1,4 @@
-Ext.define('MoMo.view.window.PrintWindowModel', {
+Ext.define('SHOGun.view.window.PrintWindowModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.window.print',
     data: {

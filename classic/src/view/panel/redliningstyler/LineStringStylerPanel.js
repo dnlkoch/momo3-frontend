@@ -21,11 +21,11 @@
  * Thank to the provided `gx_renderer` the user can see the style changes
  * immediately in the same view.
  *
- * @class MoMo.client.view.panel.redliningstyler.LineStringStylerPanel
+ * @class SHOGun.client.view.panel.redliningstyler.LineStringStylerPanel
  */
-Ext.define("MoMo.client.view.panel.redliningstyler.LineStringStylerPanel", {
+Ext.define("SHOGun.client.view.panel.redliningstyler.LineStringStylerPanel", {
     extend: "Ext.panel.Panel",
-    xtype: 'momo-panel-redliningstyler-linestring',
+    xtype: 'shogun-panel-redliningstyler-linestring',
 
     requires: [
     ],
@@ -36,7 +36,7 @@ Ext.define("MoMo.client.view.panel.redliningstyler.LineStringStylerPanel", {
 
     /**
      * The style object must be provided by the instantiating of the father
-     * class {@link MoMo.client.window.RedliningStylerWindow}
+     * class {@link SHOGun.client.window.RedliningStylerWindow}
      */
     style: null,
 

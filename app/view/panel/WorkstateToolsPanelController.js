@@ -20,13 +20,13 @@
  * the state of work on the map (visible layer, map extent, zoom level etc.)
  * and to create a permalink
  *
- * @class MoMo.client.view.panel.WorkstateToolsPanelController
+ * @class SHOGun.client.view.panel.WorkstateToolsPanelController
  */
-Ext.define('MoMo.client.view.panel.WorkstateToolsPanelController', {
+Ext.define('SHOGun.client.view.panel.WorkstateToolsPanelController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
-        'MoMo.client.view.grid.ApplicationState'
+        'SHOGun.client.view.grid.ApplicationState'
     ],
 
     alias: 'controller.panel.workstatetoolspanel',
@@ -51,7 +51,7 @@ Ext.define('MoMo.client.view.panel.WorkstateToolsPanelController', {
                     },
                     closeAction: 'hide',
                     items: [{
-                        xtype: 'momo-grid-applicationstate'
+                        xtype: 'shogun-grid-applicationstate'
                     }],
                     listeners: {
                         close: me.onWindowClose,
@@ -72,7 +72,7 @@ Ext.define('MoMo.client.view.panel.WorkstateToolsPanelController', {
      */
     onWindowClose: function() {
         var workstateToolsBtn = Ext.ComponentQuery.query(
-                'momo-button-showworkstatetoolspanel')[0];
+                'shogun-button-showworkstatetoolspanel')[0];
 
         if (workstateToolsBtn) {
             workstateToolsBtn.toggle(false);

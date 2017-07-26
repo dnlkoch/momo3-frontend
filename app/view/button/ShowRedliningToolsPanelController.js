@@ -31,10 +31,10 @@
  * The controller is based on the logic of BasiGX.view.container.Redlining
  * class, which was adapted to match the MVVC structure better.
  *
- * @class MoMo.client.view.button.ShowRedliningToolsPanelController
+ * @class SHOGun.client.view.button.ShowRedliningToolsPanelController
  */
-Ext.define('MoMo.client.view.button.ShowRedliningToolsPanelController', {
-    extend: 'MoMo.client.view.button.ShowToolsPanelCommonController',
+Ext.define('SHOGun.client.view.button.ShowRedliningToolsPanelController', {
+    extend: 'SHOGun.client.view.button.ShowToolsPanelCommonController',
 
     requires: [
     ],
@@ -54,7 +54,7 @@ Ext.define('MoMo.client.view.button.ShowRedliningToolsPanelController', {
         if (pressed){
             var conf = me.createConfigObject();
             me.showToolsPanel(
-                "MoMo.client.view.panel.RedliningToolsPanel",
+                "SHOGun.client.view.panel.RedliningToolsPanel",
                 conf
             );
         } else {
@@ -74,7 +74,7 @@ Ext.define('MoMo.client.view.button.ShowRedliningToolsPanelController', {
         var viewModel = me.getView().getViewModel();
 
         var postitPictureUrl = BasiGX.util.Url.getWebProjectBaseUrl() +
-        'client/resources/img/blue-post-it.png';
+                'client/resources/images/blue-post-it.png';
 
         var conf = {
             postitPictureUrl: postitPictureUrl,

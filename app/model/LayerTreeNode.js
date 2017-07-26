@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.model.LayerTreeNode', {
+Ext.define('SHOGun.client.model.LayerTreeNode', {
 
     extend: 'GeoExt.data.model.LayerTreeNode',
 

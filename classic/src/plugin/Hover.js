@@ -1,8 +1,8 @@
-Ext.define('MoMo.client.plugin.Hover', {
+Ext.define('SHOGun.client.plugin.Hover', {
     extend: 'BasiGX.plugin.Hover',
 
-    alias: 'plugin.momo-client-hover',
-    pluginId: 'momo-client-hover',
+    alias: 'plugin.shogun-client-hover',
+    pluginId: 'shogun-client-hover',
 
     /**
     *

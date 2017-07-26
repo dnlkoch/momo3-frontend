@@ -22,9 +22,9 @@
  * should be adjusted or don't work as expected.
  *
  *
- * @class MoMo.client.view.panel.MeasurementToolsPanelController
+ * @class SHOGun.client.view.panel.MeasurementToolsPanelController
  */
-Ext.define('MoMo.client.view.panel.MeasurementToolsPanelController', {
+Ext.define('SHOGun.client.view.panel.MeasurementToolsPanelController', {
 
     extend: 'Ext.app.ViewController',
 

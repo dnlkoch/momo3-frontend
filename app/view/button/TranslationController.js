@@ -17,13 +17,13 @@
  * TranslationController
  *
  * This controller implements the "on the fly" translation logic of the
- * momo application.
+ * SHOGun application.
  * The most functions are based on `BasiGX.view.combo.Language` class and were
  * adapted to work with buttons instead of combo box.
  *
- * @class MoMo.client.view.button.TranslationController
+ * @class SHOGun.client.view.button.TranslationController
  */
-Ext.define('MoMo.client.view.button.TranslationController', {
+Ext.define('SHOGun.client.view.button.TranslationController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
@@ -124,7 +124,7 @@ Ext.define('MoMo.client.view.button.TranslationController', {
 
                     // adjust locale of login/logout button
                     var loginBtn =
-                        Ext.ComponentQuery.query('momo-login-logout-button')[0];
+                        Ext.ComponentQuery.query('shogun-login-logout-button')[0];
                     if (loginBtn){
                         loginBtn.getController().setCurrentUserAccountName();
                     }

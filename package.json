@@ -1,8 +1,8 @@
 {
-  "name": "MoMo.client",
+  "name": "SHOGun.client",
   "type": "code",
   "version": "1.0.0",
-  "description": "Basic GIS-Client for Momo project",
+  "description": "Basic GIS-Client for SHOGun",
   "license": "GPL-3.0",
   "author": "terrestris GmbH & Co. KG",
   "scripts": {

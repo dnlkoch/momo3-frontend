@@ -28,9 +28,9 @@
  * Button used to zoom/pan to the next map extent
  *
  */
-Ext.define("MoMo.client.view.button.StepBack", {
+Ext.define("SHOGun.client.view.button.StepBack", {
     extend: "Ext.button.Button",
-    xtype: 'momo-button-stepback',
+    xtype: 'shogun-button-stepback',
 
     /**
      *
@@ -56,7 +56,7 @@ Ext.define("MoMo.client.view.button.StepBack", {
     */
     handler: function(){
         var mapComponent =
-            BasiGX.util.Map.getMapComponent('momo-map-component');
+            BasiGX.util.Map.getMapComponent('shogun-map-component');
         var mainModel = mapComponent.getViewModel();
         var mainController = mapComponent.getController();
         var mapStateHistory = mainModel.get('mapStateHistory');

@@ -18,9 +18,9 @@
  *
  * The view model for the redlining tools
  *
- * @class MoMo.client.view.button.ShowRedliningToolsPanelModel
+ * @class SHOGun.client.view.button.ShowRedliningToolsPanelModel
  */
-Ext.define('MoMo.client.view.button.ShowRedliningToolsPanelModel', {
+Ext.define('SHOGun.client.view.button.ShowRedliningToolsPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.button.showredliningtoolspanel',

@@ -18,9 +18,9 @@
  *
  * The view model for the workstate tools (button texts)
  *
- * @class MoMo.client.view.panel.WorkstateToolsPanelModel
+ * @class SHOGun.client.view.panel.WorkstateToolsPanelModel
  */
-Ext.define('MoMo.client.view.panel.WorkstateToolsPanelModel', {
+Ext.define('SHOGun.client.view.panel.WorkstateToolsPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.panel.workstatetoolspanel',

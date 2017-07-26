@@ -18,9 +18,9 @@
  *
  * A View model for the print window
  *
- * @class MoMo.client.view.form.PrintModel
+ * @class SHOGun.client.view.form.PrintModel
  */
-Ext.define('MoMo.client.view.form.PrintModel', {
+Ext.define('SHOGun.client.view.form.PrintModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.form.print',

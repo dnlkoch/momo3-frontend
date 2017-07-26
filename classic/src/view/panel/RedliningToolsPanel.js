@@ -17,11 +17,11 @@
  * Panel containing the redlining tools for the temporary drawing in the
  * client.
  *
- * @class MoMo.client.view.panel.RedliningToolsPanel
+ * @class SHOGun.client.view.panel.RedliningToolsPanel
  */
-Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
+Ext.define("SHOGun.client.view.panel.RedliningToolsPanel", {
     extend: "Ext.panel.Panel",
-    xtype: 'momo-panel-redlining',
+    xtype: 'shogun-panel-redlining',
 
     requires: [
         'Ext.button.Button'
@@ -43,7 +43,7 @@ Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
         redlineLineStringStyle: null,
         redlinePolygonStyle: null,
         redlineStyleFunction: function(feature) {
-            var me = Ext.ComponentQuery.query('momo-panel-redlining')[0];
+            var me = Ext.ComponentQuery.query('shogun-panel-redlining')[0];
             if (!(feature instanceof ol.Feature)) {
                 return;
             }
@@ -80,7 +80,7 @@ Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
         defaults: {
             xtype: 'button',
             toggleGroup: 'draw',
-            ui: 'momo-tools',
+            ui: 'shogun-tools',
             scale: 'small',
             style: {
                 margin: '0 5px 5px 5px'
@@ -141,7 +141,7 @@ Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
         defaults: {
             xtype: 'button',
             toggleGroup: 'draw',
-            ui: 'momo-tools',
+            ui: 'shogun-tools',
             scale: 'small',
             style: {
                 margin: '0 5px 5px 5px'
@@ -202,7 +202,7 @@ Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
         defaults: {
             xtype: 'button',
             toggleGroup: 'draw',
-            ui: 'momo-tools',
+            ui: 'shogun-tools',
             scale: 'small',
             style: {
                 margin: '0 5px 5px 5px'
@@ -233,7 +233,7 @@ Ext.define("MoMo.client.view.panel.RedliningToolsPanel", {
      * @event redliningchanged
      * An event that fires everytime a feature is added, deleted, moved or
      * modified.
-     * @param {MoMo.client.view.panel.RedliningToolsPanel} container
+     * @param {SHOGun.client.view.panel.RedliningToolsPanel} container
      *     The Redlining container.
      * @param {Object} state The current redlining state.
      */

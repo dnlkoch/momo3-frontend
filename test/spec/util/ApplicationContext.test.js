@@ -1,9 +1,9 @@
 /*eslint max-len: [0, 80, 4]*/
-Ext.Loader.syncRequire(['MoMo.client.util.ApplicationContext']);
+Ext.Loader.syncRequire(['SHOGun.client.util.ApplicationContext']);
 
-describe('MoMo.client.util.ApplicationContext', function() {
+describe('SHOGun.client.util.ApplicationContext', function() {
 
-    var clazz = MoMo.client.util.ApplicationContext;
+    var clazz = SHOGun.client.util.ApplicationContext;
 
     describe('Basics', function() {
         it('is defined', function() {

@@ -20,7 +20,7 @@
  *
  * @class ShowWorkstateToolsPanelModel
  */
-Ext.define('MoMo.client.view.button.ShowWorkstateToolsPanelModel', {
+Ext.define('SHOGun.client.view.button.ShowWorkstateToolsPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.button.showworkstatetoolspanel',

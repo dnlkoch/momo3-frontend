@@ -1,12 +1,12 @@
 
-Ext.define('MoMo.client.view.window.MetadataWindow',{
+Ext.define('SHOGun.client.view.window.MetadataWindow',{
     extend: 'Ext.window.Window',
-    xtype: 'momo-window-metadata',
+    xtype: 'shogun-window-metadata',
 
     name: 'metadata-window',
 
     requires: [
-        'MoMo.client.view.window.MetadataWindowModel'
+        'SHOGun.client.view.window.MetadataWindowModel'
     ],
 
     viewModel: 'window.metadata',

@@ -18,11 +18,11 @@
  *
  * Button used to print the map
  *
- * @class MoMo.client.view.button.Print
+ * @class SHOGun.client.view.button.Print
  */
-Ext.define("MoMo.client.view.button.Print", {
+Ext.define("SHOGun.client.view.button.Print", {
     extend: "Ext.Button",
-    xtype: 'momo-button-print',
+    xtype: 'shogun-button-print',
     requires: [
         'Ext.app.ViewModel'
     ],
@@ -45,7 +45,7 @@ Ext.define("MoMo.client.view.button.Print", {
 
     enableToggle: true,
 
-    toggleGroup: 'momo-common-tools',
+    toggleGroup: 'shogun-common-tools',
 
     /**
     *

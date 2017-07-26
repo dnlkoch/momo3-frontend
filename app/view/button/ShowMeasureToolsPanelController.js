@@ -21,8 +21,8 @@
  *
  * @class ShowMeasureToolsPanelController
  */
-Ext.define('MoMo.client.view.button.ShowMeasureToolsPanelController', {
-    extend: 'MoMo.client.view.button.ShowToolsPanelCommonController',
+Ext.define('SHOGun.client.view.button.ShowMeasureToolsPanelController', {
+    extend: 'SHOGun.client.view.button.ShowToolsPanelCommonController',
 
     requires: [
     ],
@@ -40,7 +40,7 @@ Ext.define('MoMo.client.view.button.ShowMeasureToolsPanelController', {
     onToggle: function(btn, pressed){
         var me = this;
         if (pressed){
-            me.showToolsPanel("MoMo.client.view.panel.MeasurementToolsPanel");
+            me.showToolsPanel("SHOGun.client.view.panel.MeasurementToolsPanel");
         } else {
             me.hideToolsPanel();
             me.deactivateTools();

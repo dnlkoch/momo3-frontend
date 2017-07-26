@@ -2,20 +2,18 @@
  * Map Component
  *
  */
-Ext.define('MoMo.client.view.component.Map', {
+Ext.define('SHOGun.client.view.component.Map', {
     extend: 'GeoExt.component.Map',
-    xtype: 'momo-component-map',
+    xtype: 'shogun-component-map',
 
     requires: [
         'BasiGX.util.Layer',
         'BasiGX.util.Map',
 
-        'MoMo.client.view.component.MapController',
-        'MoMo.client.view.component.MapModel',
+        'SHOGun.client.view.component.MapController',
+        'SHOGun.client.view.component.MapModel',
 
-        'MoMo.client.plugin.Hover',
-
-        'MoMo.view.window.WaterDataChartWindow'
+        'SHOGun.client.plugin.Hover'
     ],
 
     controller: 'component.map',
@@ -24,12 +22,12 @@ Ext.define('MoMo.client.view.component.Map', {
 
     inheritableStatics: {
         guess: function(){
-            return BasiGX.util.Map.getMapComponent('momo-component-map');
+            return BasiGX.util.Map.getMapComponent('shogun-component-map');
         }
     },
 
     plugins: [{
-        ptype: 'momo-client-hover'
+        ptype: 'shogun-client-hover'
     }],
 
     listeners: {

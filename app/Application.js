@@ -3,18 +3,18 @@
  * when it calls Ext.application(). This is the ideal place to handle
  * application launch and initialization details.
  */
-Ext.define('MoMo.client.Application', {
+Ext.define('SHOGun.client.Application', {
     extend: 'Ext.app.Application',
 
     requires: [
-        'MoMo.client.util.ApplicationContext',
-        'MoMo.client.util.ApplicationState',
-        'MoMo.client.util.URL',
-        'MoMo.client.util.Module',
-        'MoMo.client.util.User'
+        'SHOGun.client.util.ApplicationContext',
+        'SHOGun.client.util.ApplicationState',
+        'SHOGun.client.util.URL',
+        'SHOGun.client.util.Module',
+        'SHOGun.client.util.User'
     ],
 
-    name: 'MoMo.client',
+    name: 'SHOGun.client',
 
     stores: [],
 
@@ -23,15 +23,22 @@ Ext.define('MoMo.client.Application', {
         user: null
     },
 
+    launch: function () {
+        var loadMask = document.getElementById('loadmask');
+        if (loadMask) {
+            loadMask.parentNode.removeChild(loadMask);
+        }
+    },
+
     /**
      *
      */
     init: function() {
         var me = this;
-        var appCtxUtil = MoMo.client.util.ApplicationContext;
-        var appStateUtil = MoMo.client.util.ApplicationState;
-        var moduleUtil = MoMo.client.util.Module;
-        var urlUtil = MoMo.client.util.URL;
+        var appCtxUtil = SHOGun.client.util.ApplicationContext;
+        var appStateUtil = SHOGun.client.util.ApplicationState;
+        var moduleUtil = SHOGun.client.util.Module;
+        var urlUtil = SHOGun.client.util.URL;
 
         // disable annoying debug messages from WAI-ARIA 1.0 recommendations.
         Ext.enableAriaButtons = false;
@@ -42,7 +49,7 @@ Ext.define('MoMo.client.Application', {
 
         // load the application context and build the application on success
         appCtxUtil.loadApplicationContext(appId, function() {
-            var viewportName = 'MoMo.client.view.container.Viewport';
+            var viewportName = 'SHOGun.client.view.container.Viewport';
             // create the viewport
             moduleUtil.createViewport(viewportName);
             // and set it to the application
@@ -64,11 +71,11 @@ Ext.define('MoMo.client.Application', {
      */
     onLoadAppStateSuccess: function(appStateRecord) {
 
-        if (!(appStateRecord instanceof MoMo.client.model.ApplicationState)) {
+        if (!(appStateRecord instanceof SHOGun.client.model.ApplicationState)) {
             return false;
         }
 
-        var appId = parseInt(MoMo.client.util.URL
+        var appId = parseInt(SHOGun.client.util.URL
                 .getUrlQueryParameter('id'), 10);
         var appStateId = appStateRecord.get('application');
 
@@ -78,7 +85,7 @@ Ext.define('MoMo.client.Application', {
             return false;
         }
 
-        MoMo.client.util.ApplicationState.setState(appStateRecord);
+        SHOGun.client.util.ApplicationState.setState(appStateRecord);
     },
 
     /**

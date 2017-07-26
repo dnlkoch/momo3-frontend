@@ -21,11 +21,11 @@
  *   * Save/load workstate
  *   * Create permalink
  *
- * @class MoMo.client.view.button.ShowWorkstateToolsPanel
+ * @class SHOGun.client.view.button.ShowWorkstateToolsPanel
  */
-Ext.define("MoMo.client.view.button.ShowWorkstateToolsPanel", {
+Ext.define("SHOGun.client.view.button.ShowWorkstateToolsPanel", {
     extend: "Ext.button.Button",
-    xtype: 'momo-button-showworkstatetoolspanel',
+    xtype: 'shogun-button-showworkstatetoolspanel',
 
     requires: [
         'Ext.app.ViewModel',
@@ -45,7 +45,7 @@ Ext.define("MoMo.client.view.button.ShowWorkstateToolsPanel", {
 
     enableToggle: true,
 
-    toggleGroup: 'momo-common-tools',
+    toggleGroup: 'shogun-common-tools',
 
     listeners: {
         toggle: 'onToggle'

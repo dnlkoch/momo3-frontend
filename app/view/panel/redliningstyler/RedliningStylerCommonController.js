@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.view.window.RedliningStylerCommonController', {
+Ext.define('SHOGun.client.view.window.RedliningStylerCommonController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.panel.redliningstyler',
 
@@ -18,7 +18,7 @@ Ext.define('MoMo.client.view.window.RedliningStylerCommonController', {
             renderer,
             parentWindow = view.up('window'),
             redliningPanel =
-                Ext.ComponentQuery.query('momo-panel-redlining')[0];
+                Ext.ComponentQuery.query('shogun-panel-redlining')[0];
 
         if (pointStyle) {
             renderer = view.query('gx_renderer[name=pointRenderPreview]')[0];

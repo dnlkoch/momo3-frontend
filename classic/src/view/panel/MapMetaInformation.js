@@ -17,11 +17,11 @@
  * Panel containing meta informations for the map as current scale, EPSG
  * or mouse position
  *
- * @class MoMo.client.view.panel.MapMetaInformation
+ * @class SHOGun.client.view.panel.MapMetaInformation
  */
-Ext.define("MoMo.client.view.panel.MapMetaInformation", {
+Ext.define("SHOGun.client.view.panel.MapMetaInformation", {
     extend: "Ext.panel.Panel",
-    xtype: 'momo-panel-metainfos',
+    xtype: 'shogun-panel-metainfos',
 
     requires: [
         'BasiGX.view.combo.ScaleCombo',
@@ -57,7 +57,7 @@ Ext.define("MoMo.client.view.panel.MapMetaInformation", {
 
     items: [
         {
-            xtype: 'momo-combo-scale'
+            xtype: 'shogun-combo-scale'
         }, {
             xtype: 'displayfield',
             bind: {
@@ -67,7 +67,7 @@ Ext.define("MoMo.client.view.panel.MapMetaInformation", {
             listeners: {
                 afterrender: function(df) {
                     var map = BasiGX.util.Map
-                        .getMapComponent('momo-map-component').getMap(),
+                        .getMapComponent('shogun-map-component').getMap(),
                         proj = map.getView().getProjection().getCode();
                     df.setValue(proj);
                 }
@@ -82,7 +82,7 @@ Ext.define("MoMo.client.view.panel.MapMetaInformation", {
             listeners: {
                 afterrender: function(df) {
                     var map = BasiGX.util.Map
-                        .getMapComponent('momo-map-component').getMap(),
+                        .getMapComponent('shogun-map-component').getMap(),
                         mousePosCtrl;
                     Ext.each(map.getControls().getArray(), function(ctrl){
                         if (ctrl instanceof ol.control.MousePosition) {

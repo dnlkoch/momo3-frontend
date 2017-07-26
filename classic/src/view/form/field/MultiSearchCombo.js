@@ -20,11 +20,11 @@
  * searching through configurable layers. Extends the
  * `BasiGX.view.form.field.MultiSearchCombo` class.
  *
- * @class MoMo.client.view.form.field.MultiSearchCombo
+ * @class SHOGun.client.view.form.field.MultiSearchCombo
  */
-Ext.define("MoMo.client.view.form.field.MultiSearchCombo", {
+Ext.define("SHOGun.client.view.form.field.MultiSearchCombo", {
     extend: 'BasiGX.view.form.field.MultiSearchCombo',
-    xtype: "momo-form-field-multisearch",
+    xtype: "shogun-form-field-multisearch",
 
 
     viewModel: {
@@ -38,15 +38,15 @@ Ext.define("MoMo.client.view.form.field.MultiSearchCombo", {
 
     config: {
 
-        gazetteerGrid: "momo-grid-multisearchgazetteergrid",
+        gazetteerGrid: "shogun-grid-multisearchgazetteergrid",
 
-        wfsSearchGrid: "momo-grid-multisearchwfssearchgrid",
+        wfsSearchGrid: "shogun-grid-multisearchwfssearchgrid",
 
-        searchSettings: "momo-container-multisearchsettings",
+        searchSettings: "shogun-container-multisearchsettings",
 
-        wfsServerUrl:"/momo/geoserver.action",
+        wfsServerUrl:"/shogun2-webapp/geoserver.action",
 
-        wfsPrefix: "momo:",
+        wfsPrefix: "shogun:",
 
         wfsDataProjection: 'EPSG:32648',
 
@@ -54,10 +54,7 @@ Ext.define("MoMo.client.view.form.field.MultiSearchCombo", {
 
         searchLayerBlackList: [
             "hoverVectorLayer",
-            "OSM-WMS GRAY",
-            // following is a grouplayer. If it should be searchable,
-            // sublayers need to be used
-            "exploitable_groundwater"
+            "OSM-WMS GRAY"
         ]
     },
 
@@ -98,6 +95,20 @@ Ext.define("MoMo.client.view.form.field.MultiSearchCombo", {
         me.on('boxready', me.onBoxReady, me);
         me.on('change', me.onComboValueChange, me);
 
+    },
+
+    listeners: {
+        change: function() {
+            var me = this;
+            var searchContainer = me.searchContainer;
+
+            // Ensure the container is visible always.
+            if (searchContainer) {
+                searchContainer.setStyle({
+                    'z-index': 10
+                });
+            }
+        }
     }
 
 });

@@ -18,11 +18,11 @@
  *
  * Button used to show and hide a panel with redlining tools for the map
  *
- * @class MoMo.client.view.button.ShowRedliningToolsPanel
+ * @class SHOGun.client.view.button.ShowRedliningToolsPanel
  */
-Ext.define("MoMo.client.view.button.ShowRedliningToolsPanel", {
+Ext.define("SHOGun.client.view.button.ShowRedliningToolsPanel", {
     extend: "Ext.button.Button",
-    xtype: 'momo-button-showredliningtoolspanel',
+    xtype: 'shogun-button-showredliningtoolspanel',
 
     requires: [
         'Ext.app.ViewModel',
@@ -42,7 +42,7 @@ Ext.define("MoMo.client.view.button.ShowRedliningToolsPanel", {
 
     enableToggle: true,
 
-    toggleGroup: 'momo-common-tools',
+    toggleGroup: 'shogun-common-tools',
 
     listeners: {
         toggle: 'onToggle'

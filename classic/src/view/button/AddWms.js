@@ -1,6 +1,6 @@
-Ext.define("MoMo.client.view.button.AddWms", {
+Ext.define("SHOGun.client.view.button.AddWms", {
     extend: "BasiGX.view.button.AddWms",
-    xtype: 'momo-button-addwms',
+    xtype: 'shogun-button-addwms',
 
     viewModel: {
         data: {

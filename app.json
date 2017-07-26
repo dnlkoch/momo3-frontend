@@ -2,7 +2,7 @@
     /**
      * The application's namespace.
      */
-    "name": "MoMo",
+    "name": "SHOGun",
 
     /**
      * The version of the application.
@@ -54,7 +54,7 @@
     /**
      * The name of the theme for this application.
      */
-     "theme": "theme-momo-default",
+     "theme": "theme-shogun-default",
 
     /**
      * The list of required packages (with optional versions; default is "latest").
@@ -89,13 +89,13 @@
     "sass": {
         /**
          * The root namespace to use when mapping *.scss files to classes in the
-         * sass/src and sass/var directories. For example, "MoMo.client.view.Foo" would
-         * map to "sass/src/view/Foo.scss". If we changed this to "MoMo.client.view" then
+         * sass/src and sass/var directories. For example, "SHOGun.client.view.Foo" would
+         * map to "sass/src/view/Foo.scss". If we changed this to "SHOGun.client.view" then
          * it would map to "sass/src/Foo.scss". To style classes outside the app's
          * root namespace, change this to "". Doing so would change the mapping of
-         * "MoMo.client.view.Foo" to "sass/src/momo/view/Foo.scss".
+         * "SHOGun.client.view.Foo" to "sass/src/shogun/view/Foo.scss".
          */
-        "namespace": "MoMo.client",
+        "namespace": "SHOGun.client",
 
         /**
          * File used to save sass variables edited via Sencha Inspector. This file
@@ -561,7 +561,7 @@
         "classic": {
             "toolkit": "classic",
 
-            "theme": "theme-momo-default",
+            "theme": "theme-shogun-default",
 
             "sass": {
                 // "save": "classic/sass/save.scss"

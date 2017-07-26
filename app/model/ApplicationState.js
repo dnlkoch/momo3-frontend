@@ -1,8 +1,8 @@
-Ext.define('MoMo.client.model.ApplicationState', {
-    extend: 'MoMo.client.model.Base',
+Ext.define('SHOGun.client.model.ApplicationState', {
+    extend: 'SHOGun.client.model.Base',
 
     requires: [
-        'MoMo.client.data.identifier.Null'
+        'SHOGun.client.data.identifier.Null'
     ],
 
     proxy: {

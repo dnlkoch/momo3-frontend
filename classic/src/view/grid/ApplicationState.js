@@ -1,11 +1,11 @@
-Ext.define('MoMo.client.view.grid.ApplicationState', {
+Ext.define('SHOGun.client.view.grid.ApplicationState', {
     extend: 'Ext.grid.Panel',
-    xtype: 'momo-grid-applicationstate',
+    xtype: 'shogun-grid-applicationstate',
 
     requires: [
         'Ext.grid.plugin.CellEditing',
 
-        'MoMo.client.view.grid.ApplicationStateController'
+        'SHOGun.client.view.grid.ApplicationStateController'
     ],
 
     layout: 'fit',
@@ -23,7 +23,7 @@ Ext.define('MoMo.client.view.grid.ApplicationState', {
         autoLoad: false,
         filters: [
             function(item) {
-                var userId = MoMo.client.app.getUser().id;
+                var userId = SHOGun.client.app.getUser().id;
                 return item.data.owner === userId;
             }
         ]

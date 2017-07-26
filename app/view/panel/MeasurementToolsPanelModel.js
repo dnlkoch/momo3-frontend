@@ -18,9 +18,9 @@
  *
  * The view model for the measurement tools
  *
- * @class MoMo.client.view.panel.MeasurementToolsPanelModel
+ * @class SHOGun.client.view.panel.MeasurementToolsPanelModel
  */
-Ext.define('MoMo.client.view.panel.MeasurementToolsPanelModel', {
+Ext.define('SHOGun.client.view.panel.MeasurementToolsPanelModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.panel.measurementoolspanel',

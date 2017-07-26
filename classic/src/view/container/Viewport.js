@@ -1,17 +1,18 @@
-Ext.define('MoMo.client.view.container.Viewport', {
+Ext.define('SHOGun.client.view.container.Viewport', {
     extend: 'Ext.container.Viewport',
 
     requires: [
         'BasiGX.*',
         'GeoExt.*',
-        'MoMo.*',
-        'Ext.layout.container.Absolute'
+        'SHOGun.*',
+        'Ext.layout.container.Absolute',
+        'Ext.layout.container.Border'
     ],
 
-    controller: 'momo-mainviewport',
+    controller: 'shogun-mainviewport',
 
     viewModel: {
-        type: 'momo-mainviewport'
+        type: 'shogun-mainviewport'
     },
 
     listeners: {

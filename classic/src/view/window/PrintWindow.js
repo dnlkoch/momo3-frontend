@@ -1,7 +1,7 @@
 
-Ext.define('MoMo.view.window.PrintWindow',{
+Ext.define('SHOGun.view.window.PrintWindow',{
     extend: 'Ext.window.Window',
-    xtype: 'momo-print',
+    xtype: 'shogun-print',
 
     name: 'print-window',
 

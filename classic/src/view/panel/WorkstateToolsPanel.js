@@ -17,11 +17,11 @@
  * Panel containing the workstate tools for the temporary drawing in the
  * client.
  *
- * @class MoMo.client.view.panel.WorkstateToolsPanel
+ * @class SHOGun.client.view.panel.WorkstateToolsPanel
  */
-Ext.define('MoMo.client.view.panel.WorkstateToolsPanel', {
+Ext.define('SHOGun.client.view.panel.WorkstateToolsPanel', {
     extend: 'Ext.panel.Panel',
-    xtype: 'momo-panel-workstate',
+    xtype: 'shogun-panel-workstate',
 
     requires: [
         'Ext.button.Button'
@@ -45,7 +45,7 @@ Ext.define('MoMo.client.view.panel.WorkstateToolsPanel', {
     defaults: {
         xtype: 'button',
         toggleGroup: 'workstate',
-        ui: 'momo-tools',
+        ui: 'shogun-tools',
         scale: 'small',
         style: {
             margin: '0 5px 5px 5px'

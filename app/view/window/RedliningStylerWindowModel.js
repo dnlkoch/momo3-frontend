@@ -18,9 +18,9 @@
  *
  * The view model for the redlining styler window
  *
- * @class MoMo.client.view.window.RedliningStylerWindowModel
+ * @class SHOGun.client.view.window.RedliningStylerWindowModel
  */
-Ext.define('MoMo.client.view.window.RedliningStylerWindowModel', {
+Ext.define('SHOGun.client.view.window.RedliningStylerWindowModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.window.redliningstyler',

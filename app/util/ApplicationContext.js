@@ -1,4 +1,4 @@
-Ext.define('MoMo.client.util.ApplicationContext', {
+Ext.define('SHOGun.client.util.ApplicationContext', {
     extend: 'BasiGX.util.ConfigParser',
 
     statics: {
@@ -19,7 +19,7 @@ Ext.define('MoMo.client.util.ApplicationContext', {
          * The path configs needed by this class.
          */
         pathConfig: {
-            appContextUrlTpl: '../rest/momoapps/{0}'
+            appContextUrlTpl: '../rest/projectapps/{0}'
         },
 
         /**
@@ -29,9 +29,9 @@ Ext.define('MoMo.client.util.ApplicationContext', {
         getApplicationContext: function() {
             var me = this;
 
-            if (MoMo.client.getApplication() &&
-                    MoMo.client.getApplication().getApplicationContext()) {
-                return MoMo.client.getApplication().getApplicationContext();
+            if (SHOGun.client.getApplication() &&
+                    SHOGun.client.getApplication().getApplicationContext()) {
+                return SHOGun.client.getApplication().getApplicationContext();
             } else {
                 Ext.Logger.error(me.appContextNotLoadedErrorMsg);
             }
@@ -43,9 +43,9 @@ Ext.define('MoMo.client.util.ApplicationContext', {
         setApplicationContext: function(appCtx) {
             var me = this;
 
-            if (appCtx && MoMo.client.getApplication() &&
-                    MoMo.client.getApplication().setApplicationContext()) {
-                MoMo.client.getApplication().setApplicationContext(appCtx);
+            if (appCtx && SHOGun.client.getApplication() &&
+                    SHOGun.client.getApplication().setApplicationContext()) {
+                SHOGun.client.getApplication().setApplicationContext(appCtx);
             } else {
                 Ext.Logger.error(me.appContextNotSetErrorMsg);
             }

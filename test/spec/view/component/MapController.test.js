@@ -1,11 +1,11 @@
 /*eslint max-len: [0, 80, 4]*/
-Ext.Loader.syncRequire(['MoMo.client.view.component.MapController']);
+Ext.Loader.syncRequire(['SHOGun.client.view.component.MapController']);
 
-describe('MoMo.client.view.component.MapController', function() {
+describe('SHOGun.client.view.component.MapController', function() {
     var mapController;
 
     beforeEach(function() {
-        mapController = Ext.create('MoMo.client.view.component.MapController');
+        mapController = Ext.create('SHOGun.client.view.component.MapController');
     });
 
     afterEach(function() {
@@ -14,10 +14,10 @@ describe('MoMo.client.view.component.MapController', function() {
 
     describe('Basics', function() {
         it('is defined', function() {
-            expect(MoMo.client.view.component.MapController).to.not.be(undefined);
+            expect(SHOGun.client.view.component.MapController).to.not.be(undefined);
         });
         it('can be instantiated', function() {
-            expect(mapController).to.be.a(MoMo.client.view.component.MapController);
+            expect(mapController).to.be.a(SHOGun.client.view.component.MapController);
         });
     });
 

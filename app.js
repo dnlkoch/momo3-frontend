@@ -4,12 +4,12 @@
  * Sencha Cmd when upgrading.
  */
 Ext.application({
-    name: 'MoMo.client',
+    name: 'SHOGun.client',
 
-    extend: 'MoMo.client.Application',
+    extend: 'SHOGun.client.Application',
 
     requires: [
-        'MoMo.client.view.container.Viewport'
+        'SHOGun.client.view.container.Viewport'
     ]
 
 });

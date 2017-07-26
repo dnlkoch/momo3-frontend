@@ -20,11 +20,11 @@
  *  and configure layers for wfs search. Extends the
  * `BasiGX.view.container.MultiSearchSettings` class.
  *
- * @class MoMo.client.view.container.MultiSearchSettings
+ * @class SHOGun.client.view.container.MultiSearchSettings
  */
-Ext.define('MoMo.client.view.container.MultiSearchSettings',{
+Ext.define('SHOGun.client.view.container.MultiSearchSettings',{
     extend: 'BasiGX.view.container.MultiSearchSettings',
-    xtype: 'momo-container-multisearchsettings',
+    xtype: 'shogun-container-multisearchsettings',
 
     viewModel: {
         data: {

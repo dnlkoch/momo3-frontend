@@ -21,7 +21,7 @@
  *
  * @class ShowMetaPanelController
  */
-Ext.define('MoMo.client.view.button.ShowMetaPanelController', {
+Ext.define('SHOGun.client.view.button.ShowMetaPanelController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
@@ -34,7 +34,7 @@ Ext.define('MoMo.client.view.button.ShowMetaPanelController', {
      * on button click.
      */
     onClick: function(button){
-        var metaPanel = Ext.ComponentQuery.query('momo-panel-metainfos')[0];
+        var metaPanel = Ext.ComponentQuery.query('shogun-panel-metainfos')[0];
 
         if (metaPanel) {
             if (!Ext.isDefined(metaPanel.fadedIn)) {

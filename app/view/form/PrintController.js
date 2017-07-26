@@ -18,12 +18,12 @@
  *
  * The controller for the print. Based on the methods of
  * `BasiGX.view.form.Print` class and extends this with special logic to
- * match momo project print properties
+ * match SHOGun project print properties
  *
  *
- * @class MoMo.client.view.form.PrintController
+ * @class SHOGun.client.view.form.PrintController
  */
-Ext.define('MoMo.client.view.form.PrintController', {
+Ext.define('SHOGun.client.view.form.PrintController', {
 
     extend: 'Ext.app.ViewController',
 
@@ -461,7 +461,7 @@ Ext.define('MoMo.client.view.form.PrintController', {
                             dlBtn.show();
                             BasiGX.util.Animate.shake(dlBtn);
                             var fields = dlBtn.up(
-                                    'momo-form-print').query('field');
+                                    'shogun-form-print').query('field');
                             Ext.each(fields, function(field){
                                 field.on('change', function(){
                                     dlBtn.hide();

@@ -18,11 +18,11 @@
  *  A grid showing results of the multisearch WFS search response values.
  *  Extends the `BasiGX.view.grid.MultiSearchWFSSearchGrid` class.
  *
- * @class MoMo.client.view.grid.ObjectSearchGrid
+ * @class SHOGun.client.view.grid.ObjectSearchGrid
  */
-Ext.define("MoMo.client.view.grid.ObjectSearchGrid",{
+Ext.define("SHOGun.client.view.grid.ObjectSearchGrid",{
     extend: "BasiGX.view.grid.MultiSearchWFSSearchGrid",
-    xtype: "momo-grid-multisearchwfssearchgrid",
+    xtype: "shogun-grid-multisearchwfssearchgrid",
 
     viewModel: {
         data: {

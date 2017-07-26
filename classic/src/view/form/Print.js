@@ -19,12 +19,12 @@
  * Used to show an Mapfish Print v3 compatible print panel. Extends the
  * `BasiGX.view.form.Print` class.
  *
- * @class MoMo.client.view.form.Print
+ * @class SHOGun.client.view.form.Print
  */
-Ext.define("MoMo.client.view.form.Print", {
+Ext.define("SHOGun.client.view.form.Print", {
     extend: "BasiGX.view.form.Print",
 
-    xtype: "momo-form-print",
+    xtype: "shogun-form-print",
 
     layout: 'vbox',
 
@@ -39,7 +39,7 @@ Ext.define("MoMo.client.view.form.Print", {
 
     bbar: [{
         xtype: 'button',
-        name: 'createMomoPrint',
+        name: 'createShogunPrint',
         bind: {
             text: '{printFormat:uppercase} {printButtonSuffix}'
         },
@@ -49,7 +49,7 @@ Ext.define("MoMo.client.view.form.Print", {
         }
     }, {
         xtype: 'button',
-        name: 'downloadMomoPrint',
+        name: 'downloadShogunPrint',
         bind: {
             text: '{printDownload}'
         },
@@ -65,15 +65,15 @@ Ext.define("MoMo.client.view.form.Print", {
     initComponent: function(){
         this.callParent();
         var appCombo = this.down('combo[name=appCombo]');
-        appCombo.setValue("momo");
+        appCombo.setValue("shogun");
         appCombo.setHidden(true);
         // hide the containing fieldset, which is empty now
         appCombo.up().setHidden(true);
         // hide the basigx component buttons as we have our own
         var basigxBtns = this.query('button');
         Ext.each(basigxBtns, function(btn) {
-            if (btn.name !== "createMomoPrint" &&
-                btn.name !== "downloadMomoPrint") {
+            if (btn.name !== "createShogunPrint" &&
+                btn.name !== "downloadShogunPrint") {
                 btn.setHidden(true);
             }
         });
